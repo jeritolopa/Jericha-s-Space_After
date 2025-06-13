@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!--
+Design by Jericha Tolopa
+
+Name       : Jericha's Space
+Description: A one-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 2.1
+Released   : 2022-
+-->
+<html lang="en">
+<head>
+<title>Jericha's Space</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mystylesheet.css" type="text/css" media="screen" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="wrapper">
+	<div id="nav">
+    <img src="images/logo2.png" alt="logo" width="150" height="80">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="aboutme.html">About Me</a></li>
+      <li><a href="Resume.html">Resume</a></li>
+      <li><a href="Skills.html">Skills</a></li>
+      <li><a class="active" href="photos.html">Photos</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </div>
+   <!-- end #nav -->
+   
+  <div id="content"> 
+    <div id="header1">
+      <h1>Photos</h1>
+    </div>
+    <div id="photos">
+      <div class="gallery">
+        <a target="_blank" href="images/1img.jpg">
+          <img src="images/1img.jpg" alt="sunset" width="600" height="400">
+        </a>
+        <div class="desc"><b>Beautiful sunset in Port Moresby</b></div>
+        <button onclick="speakDesc(0)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/2img.jpg">
+          <img src="images/2img.jpg" alt="sea shore" width="600" height="400">
+        </a>
+        <div class="desc"><b>The sea shore in my village - Sohun, Namatanai, New Ireland</b></div>
+        <button onclick="speakDesc(1)" class="tts-btn">🔊 Listen</button>
+      </div>
+  
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/3img.jpg">
+          <img src="images/3img.jpg" alt="Forest" width="600" height="400">
+        </a>
+        <div class="desc"><b>Trip to Lae</b> </div>
+        <button onclick="speakDesc(2)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/4img.jpg">
+          <img src="images/4img.jpg" alt="sunset lae" width="600" height="400">
+        </a>
+        <div class="desc"><b>Sunset in Lae</b></div>
+        <button onclick="speakDesc(3)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/5img.jpg">
+          <img src="images/5img.jpg" alt="sunset rabaul" width="600" height="400">
+        </a>
+        <div class="desc"><b>Sunset in rabaul</b></div>
+        <button onclick="speakDesc(4)" class="tts-btn">🔊 Listen</button>
+        </a>
+
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/6img.jpg">
+          <img src="images/6img.jpg" alt="city lights" width="600" height="400">
+        </a>
+        <div class="desc"><b>City Lights in Perth</b></div>
+        <button onclick="speakDesc(5)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/10img.jpg">
+          <img src="images/10img.jpg" alt="Foody1" width="600" height="400">
+        </a>
+        <div class="desc"><b>Lunch with the Bros</b></div>
+        <button onclick="speakDesc(6)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/7mg.jpg">
+          <img src="images/7img.jpg" alt="youth group pic 1" width="600" height="400">
+        </a>
+        <div class="desc"><b>Dance item #1 - The Girls </b></div>
+        <button onclick="speakDesc(7)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/23img.jpg">
+          <img src="images/23img.jpg" alt="school" width="600" height="400">
+        </a>
+        <div class="desc"><b>Celebrating close friends birthday</b></div>
+        <button onclick="speakDesc(8)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/9img.jpg">
+          <img src="images/9img.jpg" alt="Independence" width="600" height="400">
+        </a>
+        <div class="desc"><b>Dressed in my traditional attire - New Ireland province</b></div>
+        <button onclick="speakDesc(9)" class="tts-btn">🔊 Listen</button>
+      </div>
+      
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/11img.jpg">
+          <img src="images/11img.jpg" alt="youth group pic #4" width="600" height="400">
+        </a>
+        <div class="desc"><b>Youth fun day at the beach</b></div>
+        <button onclick="speakDesc(10)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/13img.jpg">
+          <img src="images/13img.jpg" alt="youth group pic #5" width="600" height="400">
+        </a>
+        <div class="desc"><b>Celebrating my nieces 18th birthday</b></div>
+        <button onclick="speakDesc(11)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/14img.jpg">
+          <img src="images/14img.jpg" alt="youth group pic #6" width="600" height="400">
+        </a>
+        <div class="desc"><b>My Parents</b></div>
+        <button onclick="speakDesc(12)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/17img.jpg">
+          <img src="images/17img.jpg" alt="Friends #1" width="600" height="400">
+        </a>
+        <div class="desc"><b>Group picture at friends birthday party</b></div>
+        <button onclick="speakDesc(13)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/16img.jpg">
+          <img src="images/16img.jpg" alt="Friends #2" width="600" height="400">
+        </a>
+        <div class="desc"><b>A night out with my gang</b></div>
+        <button onclick="speakDesc(14)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/19img.jpg">
+          <img src="images/19img.jpg" alt="Picnic" width="600" height="300">
+        </a>
+        <div class="desc"><b>Unplanned picnics with the girlies</b></div>
+        <button onclick="speakDesc(15)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+        <a target="_blank" href="images/25img.jpg">
+          <img src="images/25img.jpg" alt="baby picture" width="600" height="400">
+        </a>
+        <div class="desc"><b>6 year old me</b></div>
+        <button onclick="speakDesc(16)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+      <!-- img owned by Jericha Tolopa -->
+      <div class="gallery">
+          <a target="_blank" href="images/22img.jpg">
+            <img src="images/22img.jpg" alt="friends #4" width="600" height="400">
+          </a>
+          <div class="desc"><b>Big sis and I in class at IBBM</b></div>
+          <button onclick="speakDesc(17)" class="tts-btn">🔊 Listen</button>
+      </div>
+
+        <!-- created by Jericha Tolopa using application called studios and various pictures smaller pictures from https://www.pinterest.com/-->
+        <div class="gallery">
+          <a target="_blank" href="images/collage3.png">
+            <img src="images/collage3.png" alt="collage3-self" width="600" height="400">
+          </a>
+          <div class="desc"><b>Collage made by myself - Self</b></div>
+          <button onclick="speakDesc(18)" class="tts-btn">🔊 Listen</button>
+        </div>
+        
+        <!-- created by Jericha Tolopa using application called studios and various pictures smaller pictures from https://www.pinterest.com/-->
+        <div class="gallery">
+          <a target="_blank" href="images/collage2.png">
+            <img src="images/collage2.png" alt="collage2-friends" width="600" height="400">
+          </a>
+          <div class="desc"><b>Collage made by myself - Celebrating close friends</b></div>
+          <button onclick="speakDesc(19)" class="tts-btn">🔊 Listen</button>
+        </div>
+        <br><div style="margin: 20px 0;">
+          <label for="voiceSelect" style="color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Choose Voice:</b></label>
+          <select id="voiceSelect" style="margin-left: 10px; padding: 4px;" class="tts-btn"></select>
+          <button onclick="stopSpeaking()" class="tts-btn" style="margin-top: 10px; padding: 8px 16px;">⏹️ Stop Speech</button>
+        </div>
+      </div>   
+  </div>
+  <!-- end #content -->
+  <div id="footer">
+    <div id="footer-content-row">
+      <div class="footer-column">
+        <h3>Jericha's Space</h3>
+        <p><b>Jericha's Space is a personal website filled with personal information and images of Jericha Tolopa - Not only that exploring the different interests and hobbies that interest her.</b></p>
+      </div>
+      <div class="footer-column">
+        <br>
+        <p><b>Contacts</b></p>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100090190800552" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/jgtolopa " class="fa fa-twitter"></a>
+          <a href="jgtolopa@gmail.com" class="fa fa-google"></a>
+          <a href="https://www.instagram.com/jeritolopa_/" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/in/jericha-tolopa-130b75254/" class="fa fa-linkedin"></a><br>
+          <p>Copyright (c) 2023 Jericha Goretti Tolopa All rights reserved. Design by Jericha Goretti Tolopa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end #footer -->
+</div>
+<script>
+let voices = [];
+
+function populateVoices() {
+  voices = speechSynthesis.getVoices();
+  const voiceSelect = document.getElementById('voiceSelect');
+  voiceSelect.innerHTML = '';
+
+  voices.forEach((voice, index) => {
+    const option = document.createElement('option');
+    option.value = index;
+    option.textContent = `${voice.name} (${voice.lang}) ${voice.gender || ''}`;
+    voiceSelect.appendChild(option);
+  });
+}
+
+speechSynthesis.onvoiceschanged = populateVoices;
+
+function getSelectedVoice() {
+  const index = document.getElementById('voiceSelect').value;
+  return voices[index];
+}
+
+function speakDesc(index) {
+  const descs = document.querySelectorAll('.desc');
+  const text = descs[index]?.innerText;
+  if (!text) return;
+
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.voice = getSelectedVoice();
+  utterance.lang = utterance.voice.lang;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utterance);
+}
+
+function stopSpeaking() {
+  speechSynthesis.cancel();
+}
+</script>
+</body>
+</html>

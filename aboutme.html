@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+Design by Jericha Tolopa
+
+Name       : Jericha's Space
+Description: A one-column, fixed-width design for 1024x768 screen resolutions.
+Version    : 2.1
+Released   : 2022-
+-->
+<html lang="en">
+<head>
+<title>Jericha's Space</title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="mystylesheet.css" type="text/css" media="screen">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div id="wrapper">
+   <!-- start #wrapper -->
+	<div id="nav">
+    <img src="images/logo2.png" alt="logo" width="150" height="80">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="aboutme.html">About Me</a></li>
+      <li><a href="Resume.html">Resume</a></li>
+      <li><a href="Skills.html">Skills</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="music.html">Music</a></li>
+    </ul>
+  </div>
+   <!-- end #nav -->
+
+  <div id="content"> 
+    <div id="header1">
+      <h1>Profile</h1>
+    </div>
+  
+    <!-- Brief Summary of myself -->
+    <div id="post1">
+      <h2>About Jericha</h2>
+      <b><p>I am from New Ireland province, East New Britain province and Milne Bay and have two older siblings. I am currently taking the bachelor of Information Technology, majoring in User Experience at IBSU University.
+        <br>
+        I was born in 2003, as the youngest of three children. Growing up, I would be out playing in the morning till afternoon and if I wast I would be playing video games on my Gameboy like Zelda and Dragon Ball Z. I also took part in church items like skits and dances, mostly because that is where I met my best friend. I had experienced a unique childhood growing up and I am grateful because it has made me into the person I am today. I always strive to be my own authentic self and understand that there is not only one way to do something.
+        <br> 
+        I also spent time during my high school days playing netball, organizing school events and fundraisers. Although I did not continue playing sports, now that I am in university I am involved in my local church’s youth programs.
+        <br>
+        </p></b>
+      <button onclick="speakaboutme()" style="margin-top: 10px; padding: 8px 16px;" class="tts-btn" >🔊 Speak</button>
+      <br><div style="margin: 20px 0;">
+      <label for="voiceSelect" style="color: white; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif"><b>Choose Voice:</b></label>
+      <select id="voiceSelect" style="margin-left: 10px; padding: 4px;" class="tts-btn"></select>
+      <button onclick="stopSpeaking()" class="tts-btn" style="margin-top: 10px; padding: 8px 16px;">⏹️ Stop Speech</button>
+    </div>  
+    </div>
+
+  <!-- end #content -->
+  
+  <div id="footer">
+    <div id="footer-content-row">
+      <div class="footer-column">
+        <h3>Jericha's Space</h3>
+        <p><b>Jericha's Space is a personal website filled with personal information and images of Jericha Tolopa - Not only that exploring the different interests and hobbies that interest her.</b></p>
+      </div>
+      <div class="footer-column">
+        <br>
+        <p><b>Contacts</b></p>
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100090190800552" class="fa fa-facebook"></a>
+          <a href="https://twitter.com/jgtolopa " class="fa fa-twitter"></a>
+          <a href="jgtolopa@gmail.com" class="fa fa-google"></a>
+          <a href="https://www.instagram.com/jeritolopa_/" class="fa fa-instagram"></a>
+          <a href="https://www.linkedin.com/in/jericha-tolopa-130b75254/" class="fa fa-linkedin"></a><br>
+          <p>Copyright (c) 2023 Jericha Goretti Tolopa All rights reserved. Design by Jericha Goretti Tolopa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end #footer -->
+</div>
+<!-- end #wrapper -->
+ <script>
+let voices = [];
+
+function populateVoices() {
+  voices = speechSynthesis.getVoices();
+  const voiceSelect = document.getElementById('voiceSelect');
+  voiceSelect.innerHTML = '';
+
+  voices.forEach((voice, index) => {
+    const option = document.createElement('option');
+    option.value = index;
+    option.textContent = `${voice.name} (${voice.lang}) ${voice.gender || ''}`;
+    voiceSelect.appendChild(option);
+  });
+}
+
+// Ensure voices are loaded
+speechSynthesis.onvoiceschanged = populateVoices;
+
+function getSelectedVoice() {
+  const index = document.getElementById('voiceSelect').value;
+  return voices[index];
+}
+
+function speakaboutme() {
+  const text = document.querySelector('#post1 p').innerText;
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.voice = getSelectedVoice();
+  utterance.lang = utterance.voice.lang;
+  speechSynthesis.cancel();
+  speechSynthesis.speak(utterance);
+}
+function stopSpeaking() {
+  speechSynthesis.cancel();
+}
+</script>
+</body>
+</html>
